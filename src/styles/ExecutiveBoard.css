@@ -1,0 +1,147 @@
+.executive-board {
+  padding-top: 80px;
+  min-height: 100vh;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.board-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.team-photo-section {
+  width: 100%;
+  margin-bottom: 3rem;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.team-photo {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.board-title {
+  color: #00b4ff;
+  font-size: 2.5rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.board-description {
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+}
+
+.board-members {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.faculty-member {
+  margin-bottom: 1.5rem;
+  width: 250px;
+}
+
+.core-members-row,
+.domain-heads-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.pr-projects-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 500px;
+}
+
+.member-card {
+  background-color: rgba(0, 42, 68, 0.3);
+  width: 80%;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+  background-color: rgba(0, 42, 68, 0.8);
+}
+
+.member-card img {
+  width: 80%;
+  margin:1rem auto;
+  height: auto;
+  display: block;
+  aspect-ratio: 0.8;
+  object-fit: cover;
+  border: 1.5px solid #00b4ff;
+}
+
+.member-info {
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.member-info h3 {
+  color: white;
+  font-size: 1rem;
+  margin: 0;
+  margin-bottom: 0.3rem;
+}
+
+.member-info p {
+  color: #00b4ff;
+  font-size: 0.9rem;
+  margin: 0;
+  font-style: italic;
+}
+
+@media (max-width: 1024px) {
+  .core-members-row,
+  .domain-heads-row {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 600px;
+  }
+}
+
+@media (max-width: 768px) {
+  .board-container {
+    padding: 1rem;
+  }
+
+  .board-title {
+    font-size: 2rem;
+  }
+
+  .board-description {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .pr-projects-row {
+    grid-template-columns: 1fr;
+    max-width: 250px;
+  }
+  
+  .faculty-member {
+    width: 200px;
+  }
+}

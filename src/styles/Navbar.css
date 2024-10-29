@@ -1,0 +1,74 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background-color: #4d4d4d20;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 1rem 2rem;
+  padding-top:1.2rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar.transitioned {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0.25rem 0;
+}
+
+.vit-logo {
+  height: 35px;
+  width: auto;
+}
+
+.comsoc-logo {
+  height: 30px;
+  width: auto;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #b4ff00;
+  transition: color 0.3s ease;
+}
+
+.navbar.transitioned .navbar-links a:hover {
+  color: #00b4ff;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+
+  .vit-logo {
+    height: 30px;
+  }
+
+  .comsoc-logo {
+    height: 25px;
+  }
+}
