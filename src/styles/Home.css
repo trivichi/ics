@@ -112,7 +112,7 @@
 
 /* Add these styles at the end of the file */
 .about-vit-section {
-  margin: 0.25rem auto;
+  margin: 0.25rem auto 3rem auto;
   padding: 0.25rem;
   max-width: 1200px;
   display: flex;
