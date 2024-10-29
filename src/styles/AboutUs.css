@@ -1,7 +1,7 @@
 .about-card {
   max-width: 1200px;
-  margin: 2rem auto;
-  padding: 2rem;
+  margin: 1rem auto;
+  padding: 1.25rem;
   background-color: rgba(50, 50, 50, 0.3);
   border-radius: 10px;
   backdrop-filter: blur(5px);
@@ -242,7 +242,7 @@
 /* Create a container for mission and vision sections */
 .mission-vision-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   gap: 2rem;
   max-width: 1200px;
   margin: 2rem auto;
@@ -252,32 +252,63 @@
 /* Mission and Vision Section styles */
 .mission-section,
 .vision-section {
-  flex: 1;
   background-color: rgba(50, 50, 50, 0.8);
   border-radius: 8px;
   padding: 2rem;
   width: 100%;
-  aspect-ratio: 1; /* Makes them square */
-  display: flex;
-  align-items: center;
 }
 
 .mission-content,
 .vision-content {
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 2rem;
-  height: 100%;
 }
-.text-content p{
-  text-align: center;
 
+.vision-content {
+  flex-direction: row-reverse;
+  text-align: right;
 }
+
+.vision-content .text-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.vision-title {
+  text-align: right;
+  position: relative;
+  display: inline-block;
+  margin: 0 0 1rem auto;
+}
+
+.vision-content .text-content p {
+  text-align: right;
+  margin: 0;
+}
+
+.vision-content .eye-icon {
+  margin-left: 2rem;
+}
+
+@media (max-width: 768px) {
+  .vision-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .vision-content .eye-icon {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
+
 .target-icon,
 .eye-icon {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
 }
 
 .target-icon img,
@@ -287,69 +318,92 @@
   object-fit: contain;
 }
 
-/* Media query for responsiveness */
-@media (max-width: 768px) {
-  .mission-vision-container {
-    flex-direction: column;
-    padding: 0 1rem;
-  }
-
-  .mission-section,
-  .vision-section {
-    width: 100%;
-  }
+.text-content {
+  flex: 1;
 }
 
-/* Add these styles to your existing CSS */
-
-.about-vit-section {
-  margin: 4rem auto;
-  padding: 0 2rem;
-  max-width: 1200px;
+.mission-title,
+.vision-title {
+  color: #00b4ff;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: left;
+  display: inline-block;
+  position: relative;
 }
 
-.about-vit-card {
-  background-color: rgba(50, 50, 50, 0.8);
-  border-radius: 20px;
-  padding: 2rem;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+.vision-title {
+  text-align: right;
 }
 
-.vit-image {
+.title-decoration {
+  position: absolute;
   width: 100%;
-  margin: 2rem 0;
-  border-radius: 8px;
-  overflow: hidden;
+  height: 20px;
+  bottom: -10px;
+  left: 0;
 }
 
-.vit-image img {
-  width: 100%;
-  height: auto;
-  display: block;
+.title-decoration .line {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: white;
 }
 
-.vit-description {
+.title-decoration .diamond-left,
+.title-decoration .diamond-right {
+  position: absolute;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  background: white;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.title-decoration .diamond-left {
+  left: -4px;
+}
+
+.title-decoration .diamond-right {
+  right: -4px;
+}
+
+
+
+.text-content p {
   color: white;
-  line-height: 1.8;
-  font-size: 1.1rem;
-  text-align: center;
-}
-
-.vit-description p {
-  margin: 1rem 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin: 0;
 }
 
 @media (max-width: 768px) {
-  .about-vit-section {
-    padding: 0 1rem;
+  .mission-content,
+  .vision-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
   }
 
-  .about-vit-card {
-    padding: 1rem;
+  .mission-title,
+  .vision-title {
+    text-align: center;
+    font-size: 1.8rem;
+    display: inline-block;
+    margin: 1rem auto;
   }
 
-  .vit-description {
-    font-size: 1rem;
+  .target-icon,
+  .eye-icon {
+    width: 100px;
+    height: 100px;
+  }
+
+  .text-content p {
+    text-align: center;
+    font-size: 0.85rem;
   }
 }

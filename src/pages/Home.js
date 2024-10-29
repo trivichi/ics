@@ -25,6 +25,27 @@ function Home() {
           <button className="know-more-btn">Know more</button>
         </div>
       </div>
+
+      <div className="about-vit-section">
+        <div className="about-vit-card">
+          <h2 className="section-title">
+            ABOUT VIT
+            <span className="diamond-left"></span>
+            <span className="diamond-right"></span>
+          </h2>
+          <div className="vit-image">
+            <img src="/TT_photo/TT_FINAL_PHOTO_27-12-2007.jpg" alt="VIT Campus" />
+          </div>
+          <div className="vit-description">
+            <p>
+              VIT was established with the aim of providing quality higher education on par with international standards. It persistently seeks and adopts innovative methods to improve the quality of higher education on a consistent basis. The campus has a cosmopolitan atmosphere with students from all corners of the globe. Experienced and learned teachers are strongly encouraged to nurture the students. The global standards set at VIT in the field of teaching and research spur us on in our relentless pursuit of excellence.
+            </p>
+            <p>
+              The University is headed by its founder and Chancellor, Dr. G. Viswanathan, a former Parliamentarian and Minister in the Tamil Nadu Government. In recognition of his service to India in offering world class education, he was conferred an honorary doctorate by the West Virginia University, USA.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

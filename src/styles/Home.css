@@ -2,14 +2,14 @@
   min-height: 100vh;
   color: white;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: rgba(0, 0, 0, 0.1);
-  display: flex;
+
   align-items: center;
 }
 
 .hero-section {
-  padding-top: 80px;
+  min-height: 100vh;
   text-align: center;
   max-width: 1200px;
   margin: 0 auto;
@@ -20,6 +20,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 0 2rem;
 }
 
 .title {
@@ -106,5 +107,70 @@
 
   .description {
     padding: 0 1rem;
+  }
+}
+
+/* Add these styles at the end of the file */
+.about-vit-section {
+  margin: 0.25rem auto;
+  padding: 0.25rem;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+}
+
+.about-vit-card {
+  background-color: rgba(50, 50, 50, 0.8);
+  border-radius: 15px;
+  padding: 0.5rem;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.about-vit-card .section-title {
+  margin-bottom: 0.15rem;
+  font-size: 1.6rem;
+}
+
+.vit-image {
+  width: 100%;
+  margin: 0.15rem 0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.vit-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.vit-description {
+  color: white;
+  line-height: 1.2;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.vit-description p {
+  margin: 0.15rem 0;
+}
+
+@media (max-width: 768px) {
+  .about-vit-section {
+    padding: 0.25rem;
+    margin: 0.25rem;
+  }
+
+  .about-vit-card {
+    padding: 0.4rem;
+  }
+
+  .about-vit-card .section-title {
+    font-size: 1.4rem;
+  }
+
+  .vit-description {
+    font-size: 0.8rem;
   }
 }

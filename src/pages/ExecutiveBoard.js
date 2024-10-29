@@ -4,35 +4,44 @@ function ExecutiveBoard() {
   return (
     <div className="executive-board">
       <div className="board-container">
-        {/* Team Photo Section */}
-        <div className="team-photo-section">
-          <img 
-            src="../photos/Comsoc_group-photo.jpg" 
-            alt="Executive Board Team" 
-            className="team-photo"
-          />
+        {/* Wrap the intro content in a new div */}
+        <div className="board-intro">
+          <div className="team-photo-section">
+            <img 
+              src="../photos/Comsoc_group-photo.jpg" 
+              alt="Executive Board Team" 
+              className="team-photo"
+            />
+          </div>
+
+          <h1 className="board-title">
+            EXECUTIVE BOARD OF DIRECTORS 24-25
+          </h1>
+
+          <p className="board-description">
+            As board members, we work meticulously with unwavering passion, work ethic and dedicatedly 
+            to advance the mission of IEEE Communications Society in VIT with chapter members.
+          </p>
         </div>
 
-        {/* Title Section */}
-        <h1 className="board-title">
-          EXECUTIVE BOARD OF DIRECTORS 24-25
-        </h1>
-
-        {/* Description */}
-        <p className="board-description">
-        As board members, we work meticulously with unwavering passion, work ethic and dedicatedly 
-        to advance the mission of IEEE Communications Society in VIT with chapter members.
-        </p>
-
-        {/* Board Members Grid */}
+        {/* Board members section remains the same */}
         <div className="board-members">
           {/* Faculty Coordinator - Top Center */}
           <div className="faculty-member">
-            <div className="member-card">
-              <img src="/photos/DR._Thanikaiselvan_V-(Faculty_Coordinator).jpg" alt="Faculty Coordinator" />
-              <div className="member-info">
-                <h3>Dr. Thanikaiselvan V</h3>
-                <p>Faculty Coordinator</p>
+            <div className="faculty-row">
+              <div className="member-card">
+                <img src="/photos/DR._Thanikaiselvan_V-(Faculty_Coordinator).jpg" alt="Faculty Coordinator" />
+                <div className="member-info">
+                  <h3>Dr. Thanikaiselvan V</h3>
+                  <p>Faculty Coordinator</p>
+                </div>
+              </div>
+              <div className="member-card">
+                <img src="/photos/Dr._Renuga_Devi_S-(Faculty_Coordinator).jpg" alt="Faculty Coordinator" />
+                <div className="member-info">
+                  <h3>Dr. Renuga Devi S</h3>
+                  <p>Faculty Coordinator</p>
+                </div>
               </div>
             </div>
           </div>

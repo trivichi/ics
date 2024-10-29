@@ -1,5 +1,4 @@
 .executive-board {
-  padding-top: 80px;
   min-height: 100vh;
   color: white;
   background-color: rgba(0, 0, 0, 0.1);
@@ -12,9 +11,17 @@
   text-align: center;
 }
 
+.board-intro {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 80px;
+}
+
 .team-photo-section {
   width: 100%;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -29,7 +36,7 @@
 .board-title {
   color: #00b4ff;
   font-size: 2.5rem;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
   text-align: center;
 }
 
@@ -39,15 +46,15 @@
   line-height: 1.8;
   text-align: center;
   max-width: 900px;
-  margin: 0 auto 3rem;
+  margin: 0 auto;
 }
 
 .board-members {
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  margin-top: 4rem;
 }
 
 .faculty-member {
@@ -144,4 +151,21 @@
   .faculty-member {
     width: 200px;
   }
+}
+
+.faculty-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.faculty-member {
+  width: 100%;
+  max-width: 450px; /* Adjust this value as needed */
+  margin-bottom: 1rem;
+}
+
+.faculty-member .member-card {
+  width: 200px; /* Or your preferred width */
 }

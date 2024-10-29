@@ -39,15 +39,18 @@ function AboutUs() {
               <img src="../Aboutuspng/Mission.png" alt="Mission" />
             </div>
             <div className="text-content">
-              <h2 className="section-title">
+              <h2 className="mission-title">
                 OUR MISSION
-                <span className="diamond-left"></span>
-                <span className="diamond-right"></span>
+                <div className="title-decoration">
+                  <span className="diamond-left"></span>
+                  <span className="line"></span>
+                  <span className="diamond-right"></span>
+                </div>
               </h2>
               <p>
-              The IEEE Communications Society at VIT promotes technological innovation and fosters creation and sharing of information among 
-              the global technical community. The Society provides services to members for their technical and professional advancement 
-              and forums for technical exchanges among professionals in academia, industry, and public institutions.
+                The IEEE Communications Society at VIT promotes technological innovation and fosters creation and sharing of information among 
+                the global technical community. The Society provides services to members for their technical and professional advancement 
+                and forums for technical exchanges among professionals in academia, industry, and public institutions.
               </p>
             </div>
           </div>
@@ -55,18 +58,21 @@ function AboutUs() {
 
         <div className="vision-section">
           <div className="vision-content">
-            <div className="eye-icon">
+          <div className="eye-icon">
               <img src="../Aboutuspng/Vision.png" alt="Vision" />
             </div>
             <div className="text-content">
-              <h2 className="section-title">
+              <h2 className="vision-title">
                 OUR VISION
-                <span className="diamond-left"></span>
-                <span className="diamond-right"></span>
+                <div className="title-decoration">
+                  <span className="diamond-left"></span>
+                  <span className="line"></span>
+                  <span className="diamond-right"></span>
+                </div>
               </h2>
               <p>
-              To bring the world together in harmony through communications and 
-              networking technology research, application, education, and incubation of new ideas.
+                To bring the world together in harmony through communications and 
+                networking technology research, application, education, and incubation of new ideas.
               </p>
             </div>
           </div>
@@ -108,43 +114,6 @@ function AboutUs() {
           <div className="domain-card">
             <img src="/domains/marketing.png" alt="Marketing" className="domain-icon" />
             <h3>MARKETING</h3>
-          </div>
-        </div>
-      </div>
-
-      {/* Add this after the domains-section */}
-      <div className="about-vit-section">
-        <div className="about-vit-card">
-          <h2 className="section-title">
-            ABOUT VIT
-            <span className="diamond-left"></span>
-            <span className="diamond-right"></span>
-          </h2>
-          <div className="vit-image">
-            <img src="/TT_photo/TT_FINAL_PHOTO_27-12-2007.jpg" alt="VIT Campus" />
-          </div>
-          <div className="vit-description">
-            <p>
-              VIT was established with the aim of providing quality higher education on par with international standards. It persistently seeks and
-            </p>
-            <p>
-              adopts innovative methods to improve the quality of higher education on a consistent basis. The campus has a cosmopolitan atmosphere with students from all corners of the globe. Experienced and learned teachers are strongly encouraged to nurture the students. The global standards set at VIT in the field of teaching and research spur us on in our relentless pursuit of excellence.
-            </p>
-            <p>
-              It was established under Section 3 of the University Grants Commission (UGC) Act, 1956, and was founded in 1984 as a self-financing
-            </p>
-            <p>
-              institution called the Vellore Engineering College. The Union Ministry of Human Resources Development conferred University status on
-            </p>
-            <p>
-              Vellore Engineering College in 2001.
-            </p>
-            <p>
-              The University is headed by its founder and Chancellor, Dr. G. Viswanathan, a former Parliamentarian and Minister in the Tamil Nadu Government. In recognition of his service to India in offering world class education, he was conferred an honorary doctorate
-            </p>
-            <p>
-              by the West Virginia University, USA.
-            </p>
           </div>
         </div>
       </div>
