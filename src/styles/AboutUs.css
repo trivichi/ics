@@ -55,11 +55,11 @@
 
 .about-us {
   padding-top: 80px;
-  min-height: 100vh;
   color: white;
   position: relative;
   z-index: 1;
   background-color: rgba(0, 0, 0, 0.1);
+  animation: fadeSlideIn 0.5s ease-out forwards;
 }
 
 .about-content {
@@ -105,10 +105,9 @@
   background-color: rgba(50, 50, 50, 0.8);
   border-radius: 8px;
   padding: 2rem;
-  margin-bottom: 3rem;
-  width: 40%;
-  margin: 0 auto;
-  margin-bottom: 1rem;
+  width: 90%;
+  margin: 1rem auto;
+  min-height: auto;
 }
 
 .mission-content,
@@ -143,8 +142,12 @@
 /* Domains Section */
 .domains-section {
   width: 100%;
-  padding: 4rem 2rem;
-  margin: 1rem;
+  padding: 4rem 0;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .title-container {
@@ -168,27 +171,28 @@
   gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 /* Media queries remain the same */
 @media (max-width: 768px) {
   .domains-section {
-    padding: 2rem 1rem;
+    padding: 2rem 0;
   }
   
   .domains-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .domains-grid {
-    grid-template-columns: 1fr;
+    gap: 1rem;
   }
 }
 
 .domain-card {
-  background-color: rgba(0, 42, 68, 0.8);
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 42, 68, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   padding: 2rem;
   border-radius: 8px;
   transition: transform 0.3s ease;
@@ -196,6 +200,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .domain-card:hover {
@@ -233,20 +238,18 @@
   }
 }
 
-@media (max-width: 480px) {
-  .domains-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* Create a container for mission and vision sections */
 .mission-vision-container {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   max-width: 1200px;
-  margin: 2rem auto;
-  padding: 0 2rem;
+  margin: 0 auto;
+  padding: 1rem;
+  min-height: calc(100vh - 80px);
+  justify-content: center;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* Mission and Vision Section styles */
@@ -405,5 +408,19 @@
   .text-content p {
     text-align: center;
     font-size: 0.85rem;
+  }
+}
+
+/* Mobile and Tablet Optimizations */
+@media (max-width: 1024px) {
+  .mission-section,
+  .vision-section {
+    width: 80%;
+  }
+
+  .domains-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 0 1.5rem;
   }
 }

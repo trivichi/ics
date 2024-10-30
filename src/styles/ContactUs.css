@@ -3,9 +3,9 @@
   color: white;
   position: relative;
   overflow: hidden;
-  background-color: #4d4d4d10;
   display: flex;
   align-items: center;
+  animation: fadeSlideIn 0.5s ease-out forwards;
 }
 
 .hero-section {
@@ -22,10 +22,11 @@
   max-width: 800px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: rgba(77, 77, 77, 0.1);
+  background-color: rgba(50, 50, 50, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
 }
 
 .contact-form {
@@ -50,7 +51,7 @@ input,
 textarea {
   width: 100%;
   padding: 15px;
-  background-color: #008bb7;
+  background-color: #00b4ff;
   border: none;
   border-radius: 5px;
   color: white;
@@ -147,5 +148,133 @@ textarea {
   .contact-title {
     font-size: 1.8rem;
     margin-bottom: 1rem;
+  }
+}
+
+/* Mobile and Tablet Optimizations */
+@media (max-width: 1024px) {
+  .contact-content {
+    max-width: 600px;
+    margin: 1rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 60px 1rem 1rem 1rem;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-content {
+    padding: 1.5rem;
+  }
+
+  input,
+  textarea {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .submit-btn {
+    padding: 12px 40px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-page {
+    padding: 50px 0.5rem 0.5rem 0.5rem;
+  }
+
+  .contact-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-content {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+
+  input,
+  textarea {
+    padding: 0.7rem;
+    font-size: 0.8rem;
+  }
+
+  .submit-btn {
+    padding: 10px 30px;
+    font-size: 0.9rem;
+  }
+
+  .form-group {
+    margin-bottom: 0.8rem;
+  }
+}
+
+/* Mobile Optimizations */
+@media (max-width: 480px) {
+  .contact-page {
+    align-items: flex-start;
+    padding-top: 80px;
+    height: auto;
+  }
+
+  .hero-section {
+    padding-top: 0;
+  }
+
+  .contact-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-content {
+    margin: 1rem;
+    padding: 1.2rem;
+    width: calc(100% - 2rem);
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  input,
+  textarea {
+    padding: 12px;
+    font-size: 16px; /* Better for mobile touch targets */
+    margin-bottom: 0.8rem;
+  }
+
+  textarea {
+    min-height: 120px;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-top: 1rem;
+  }
+
+  /* Ensure proper spacing between form elements */
+  .form-group {
+    margin-bottom: 0.8rem;
+  }
+
+  /* Improve placeholder text readability */
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 14px;
   }
 }

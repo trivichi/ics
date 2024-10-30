@@ -6,6 +6,7 @@
   background-color: rgba(0, 0, 0, 0.1);
 
   align-items: center;
+  animation: fadeSlideIn 0.5s ease-out forwards;
 }
 
 .hero-section {
@@ -40,14 +41,26 @@
 .description {
   max-width: 1000px;
   margin: 2rem auto;
+  padding: 2rem;
   line-height: 1.8;
   font-size: 1.1rem;
   text-align: justify;
-  padding: 0 2rem;
   color: rgba(255, 255, 255, 0.9);
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+  /* New card styles */
+  background-color: rgba(50, 50, 50, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+.description p {
+  margin-bottom: 1rem;
 }
 
 .know-more-btn {
@@ -57,12 +70,12 @@
   padding: 12px 40px;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   border-radius: 4px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 500;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .know-more-btn:hover {
@@ -85,92 +98,145 @@
   }
   
   .description {
+    padding: 1.5rem;
     font-size: 1rem;
     text-align: left;
-    padding: 0 1.5rem;
+    margin: 1.5rem auto;
   }
 }
 
 @media (max-width: 480px) {
   .hero-section {
     padding-top: 50px;
+    padding: 0 1rem;
   }
 
   .title {
-    font-size: 1.8rem;
-    margin-top: 1rem;
+    font-size: 1.5rem;
+    margin-top: 0.8rem;
   }
 
   .chapter {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .description {
-    padding: 0 1rem;
+    padding: 0.8rem;
+    margin: 0.8rem auto;
+    font-size: 0.9rem;
+  }
+
+  .know-more-btn {
+    padding: 10px 30px;
+    font-size: 0.9rem;
+  }
+
+  .about-vit-section {
+    margin: 2rem auto;
+    padding: 0.5rem;
+  }
+
+  .about-vit-card {
+    padding: 0.8rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .vit-description {
+    font-size: 0.9rem;
   }
 }
 
 /* Add these styles at the end of the file */
 .about-vit-section {
-  margin: 0.25rem auto 3rem auto;
-  padding: 0.25rem;
+  margin: 4rem auto;
+  padding: 1rem;
   max-width: 1200px;
   display: flex;
   align-items: center;
 }
 
 .about-vit-card {
-  background-color: rgba(50, 50, 50, 0.8);
+  background-color: rgba(50, 50, 50, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 15px;
-  padding: 0.5rem;
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  padding: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
 }
 
 .about-vit-card .section-title {
-  margin-bottom: 0.15rem;
-  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #00b4ff;
+  text-align: center;
+  position: relative;
+  padding-bottom: 1rem;
 }
 
 .vit-image {
   width: 100%;
-  margin: 0.15rem 0;
-  border-radius: 6px;
+  margin: 1.5rem 0;
+  border-radius: 15px;
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .vit-image img {
   width: 100%;
   height: auto;
   display: block;
+  transition: transform 0.3s ease;
 }
 
 .vit-description {
-  color: white;
-  line-height: 1.2;
-  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.8;
+  font-size: 1.1rem;
   text-align: center;
+  padding: 0 1rem;
 }
 
 .vit-description p {
-  margin: 0.15rem 0;
+  margin: 1.5rem 0;
 }
 
 @media (max-width: 768px) {
   .about-vit-section {
-    padding: 0.25rem;
-    margin: 0.25rem;
+    margin: 3rem 1rem;
+    padding: 0.5rem;
   }
 
   .about-vit-card {
-    padding: 0.4rem;
+    padding: 1.5rem;
   }
 
   .about-vit-card .section-title {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
   }
 
   .vit-description {
-    font-size: 0.8rem;
+    font-size: 1rem;
+    padding: 0;
+    text-align: left;
+  }
+
+  .vit-image {
+    margin: 1rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-vit-card {
+    padding: 1rem;
+  }
+
+  .vit-description {
+    font-size: 0.9rem;
   }
 }

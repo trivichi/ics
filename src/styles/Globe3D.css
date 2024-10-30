@@ -9,36 +9,23 @@
   overflow: hidden;
 }
 
-.sketchfab-embed-wrapper {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  opacity: 0.3;
-  transition: opacity 1.5s ease; /* Smoother transition */
-}
-
-/* When home page is transitioned, make globe more visible */
-.home.transitioned ~ .globe-container .sketchfab-embed-wrapper {
-  opacity: 0.3;
-  transition: opacity 1.5s ease;
-}
-
-.sketchfab-embed-wrapper iframe {
+.background-video {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1.5);
-  width: 100%;
-  height: 100%;
-  border: none;
-  will-change: transform; /* Optimize performance */
-  backface-visibility: hidden; /* Reduce blur */
-  -webkit-backface-visibility: hidden;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  opacity: 1;
+  object-fit: cover;
+  transition: opacity 1.5s ease;
 }
 
-/* Add media query for mobile devices */
+
 @media (max-width: 768px) {
-  .sketchfab-embed-wrapper iframe {
-    transform: translate(-50%, -50%) scale(2);
+  .background-video {
+    transform: translate(-50%, -50%) scale(1.2);
   }
 }

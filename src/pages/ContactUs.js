@@ -1,4 +1,5 @@
 import '../styles/ContactUs.css';
+import '../styles/Mobile.css';
 
 function ContactUs() {
   return (

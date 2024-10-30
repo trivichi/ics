@@ -1,36 +1,9 @@
 import '../styles/AboutUs.css';
+import '../styles/Mobile.css';
 
 function AboutUs() {
   return (
     <div className="about-us">
-      {/* Top Card Section */}
-      <div className="about-card">
-        <h2 className="section-title">
-          ABOUT US
-          <span className="diamond-left"></span>
-          <span className="diamond-right"></span>
-        </h2>
-        <div className="team-image">
-          <img src="../photos/Comsoc_group-photo.jpg" alt="IEEE ComSoc Team" />
-        </div>
-        <div className="about-description">
-          <p>
-            IEEE Communications Society (IEEE ComSoc) is one of the finest technical chapters of VIT Vellore and 
-            the team members contribute new ideas and information to our collective knowledge, developing 
-            higher industry standards, and changing the way we all communicate, for the better. Society 
-            promotes technological innovation and fosters creation and sharing of information among the global 
-            technical community. The Society provides services to members for their technical and professional 
-            advancement and forums for technical exchanges among professionals in academia, industry, and 
-            public institutions. To bring the world together in harmony through communications and networking 
-            technology research, application, education, and incubation of new ideas. Society members can 
-            participate in the development and implementation of standards in the communications field in 
-            areas such as network management and optical communications. The chapter consists of 200+ 
-            active members who are extremely talented and result oriented students. We have conducted 
-            multiple events in and out of our college and have achieved remarkable success in all the events.
-          </p>
-        </div>
-      </div>
-
       {/* Mission and Vision Sections */}
       <div className="mission-vision-container">
         <div className="mission-section">

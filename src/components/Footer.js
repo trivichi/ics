@@ -23,16 +23,6 @@ const Footer = () => {
             </ul>
           </div>
           
-          <div className="footer-section">
-            <h3>Resources</h3>
-            <ul>
-              <li><a href="https://www.comsoc.org/" target="_blank" rel="noopener noreferrer">IEEE ComSoc</a></li>
-              <li><a href="https://ieeexplore.ieee.org/" target="_blank" rel="noopener noreferrer">IEEE Xplore</a></li>
-              <li><a href="https://spectrum.ieee.org/" target="_blank" rel="noopener noreferrer">IEEE Spectrum</a></li>
-              <li><a href="https://standards.ieee.org/" target="_blank" rel="noopener noreferrer">IEEE Standards</a></li>
-            </ul>
-          </div>
-          
           <div className="footer-section contact-section">
             <h1 className="footer-title">GET IN TOUCH</h1>
             <div className="footer-address">

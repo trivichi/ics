@@ -14,7 +14,7 @@ footer {
 
 .footer-sections {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
 }
 
@@ -127,24 +127,5 @@ footer {
 
   .social-icons {
     gap: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer-title {
-    font-size: 1.5rem;
-  }
-
-  .footer-address p {
-    font-size: 0.9rem;
-  }
-
-  .social-icon {
-    width: 40px;
-    height: 40px;
-  }
-
-  .social-icon i {
-    font-size: 1rem;
   }
 } 

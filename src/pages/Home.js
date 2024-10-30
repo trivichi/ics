@@ -38,10 +38,17 @@ function Home() {
           </div>
           <div className="vit-description">
             <p>
-              VIT was established with the aim of providing quality higher education on par with international standards. It persistently seeks and adopts innovative methods to improve the quality of higher education on a consistent basis. The campus has a cosmopolitan atmosphere with students from all corners of the globe. Experienced and learned teachers are strongly encouraged to nurture the students. The global standards set at VIT in the field of teaching and research spur us on in our relentless pursuit of excellence.
+              VIT was established with the aim of providing quality higher education on par with international standards. 
+              It persistently seeks and adopts innovative methods to improve the quality of higher education on a consistent basis. 
+              The campus has a cosmopolitan atmosphere with students from all corners of the globe. 
+              Experienced and learned teachers are strongly encouraged to nurture the students. 
+              The global standards set at VIT in the field of teaching and research spur us on in our relentless pursuit of excellence.
             </p>
             <p>
-              The University is headed by its founder and Chancellor, Dr. G. Viswanathan, a former Parliamentarian and Minister in the Tamil Nadu Government. In recognition of his service to India in offering world class education, he was conferred an honorary doctorate by the West Virginia University, USA.
+              The University is headed by its founder and Chancellor, Dr. G. Viswanathan, 
+              a former Parliamentarian and Minister in the Tamil Nadu Government.
+               In recognition of his service to India in offering world class education, 
+               he was conferred an honorary doctorate by the West Virginia University, USA.
             </p>
           </div>
         </div>

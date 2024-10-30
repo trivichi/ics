@@ -9,6 +9,7 @@ import ContactUs from './pages/ContactUs';
 import Footer from './components/Footer';
 import Globe3D from './components/Globe3D';
 import './App.css';
+import './styles/Tablet.css';
 
 function App() {
   return (

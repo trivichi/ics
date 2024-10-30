@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import '../styles/Events.css';
+import '../styles/Mobile.css';
 
 function Events() {
   const [activeTab, setActiveTab] = useState('upcoming');

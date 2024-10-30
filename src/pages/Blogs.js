@@ -1,4 +1,5 @@
 import '../styles/Blogs.css';
+import '../styles/Mobile.css';
 
 function Blogs() {
   return (

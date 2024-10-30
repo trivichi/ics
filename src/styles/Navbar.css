@@ -15,6 +15,7 @@
   align-items: center;
 }
 
+
 .navbar.transitioned {
   background-color: rgba(0, 0, 0, 0.8);
 }
@@ -41,7 +42,13 @@
   gap: 2rem;
 }
 
-.navbar-links a {
+.nav-link-container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
   color: white;
   text-decoration: none;
   font-weight: 500;
@@ -50,13 +57,117 @@
   transition: color 0.3s ease;
 }
 
-.navbar-links a:hover {
+.nav-link:hover {
   color: #b4ff00;
   transition: color 0.3s ease;
 }
 
-.navbar.transitioned .navbar-links a:hover {
+.navbar.transitioned .nav-link:hover {
   color: #00b4ff;
+}
+
+/* Hamburger Menu Styles */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  z-index: 1001;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  box-shadow: none;
+}
+
+.menu-toggle:focus {
+  outline: none;
+  background: none;
+  box-shadow: none;
+}
+
+.menu-toggle:active {
+  background: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.hamburger {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  position: relative;
+  transition: all 0.3s ease;
+  z-index: 1002;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease;
+  z-index: 1002;
+}
+
+.hamburger::before {
+  top: -8px;
+}
+
+.hamburger::after {
+  bottom: -8px;
+}
+
+.hamburger.active {
+  background-color: transparent;
+}
+
+.hamburger.active::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.hamburger.active::after {
+  transform: rotate(-45deg);
+  bottom: 0;
+}
+
+@media (max-width: 1024px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(50, 50, 50, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    flex-direction: column;
+    padding: 80px 2rem 2rem;
+    transition: right 0.3s ease;
+    gap: 1.5rem;
+  }
+
+  .navbar-links.active {
+    right: 0;
+  }
+
+  .nav-link-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .nav-link {
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+  }
 }
 
 @media (max-width: 768px) {
@@ -70,5 +181,16 @@
 
   .comsoc-logo {
     height: 25px;
+  }
+
+  .navbar-links {
+    width: 200px;
+    padding: 70px 1.5rem 1.5rem;
+  }
+}
+
+@media (hover: hover) {
+  .menu-toggle:hover {
+    opacity: 0.8;
   }
 }
