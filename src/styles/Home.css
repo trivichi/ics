@@ -3,7 +3,7 @@
   color: white;
   position: relative;
   overflow-x: hidden;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0);
 
   align-items: center;
   animation: fadeSlideIn 0.5s ease-out forwards;
@@ -51,8 +51,8 @@
   align-items: center;
   
   /* New card styles */
-  background-color: rgba(50, 50, 50, 0.3);
-  backdrop-filter: blur(10px);
+  background-color: rgba(13, 13, 13, 0.6);
+  backdrop-filter:blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 15px;
@@ -203,40 +203,4 @@
 
 .vit-description p {
   margin: 1.5rem 0;
-}
-
-@media (max-width: 768px) {
-  .about-vit-section {
-    margin: 3rem 1rem;
-    padding: 0.5rem;
-  }
-
-  .about-vit-card {
-    padding: 1.5rem;
-  }
-
-  .about-vit-card .section-title {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .vit-description {
-    font-size: 1rem;
-    padding: 0;
-    text-align: left;
-  }
-
-  .vit-image {
-    margin: 1rem 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .about-vit-card {
-    padding: 1rem;
-  }
-
-  .vit-description {
-    font-size: 0.9rem;
-  }
 }
