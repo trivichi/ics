@@ -146,3 +146,38 @@
   margin: 0;
   font-style: italic;
 }
+@media (max-width: 768px) {
+  .faculty-row, .pr-projects-row {
+    grid-template-columns: repeat(2, 160px);
+    justify-content: center;
+  }
+  
+  .core-members-row, .domain-heads-row {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 160px));
+    justify-content: center;
+  }
+
+  .member-card {
+    width: 160px;
+  }
+  
+  .board-title {
+    font-size: 2rem;
+  }
+  
+  .team-photo-section {
+    height: 300px;
+  }
+
+  .member-info {
+    padding: 0.5rem;
+  }
+
+  .member-info h3 {
+    font-size: 0.85rem;
+  }
+
+  .member-info p {
+    font-size: 0.7rem;
+  }
+} 
