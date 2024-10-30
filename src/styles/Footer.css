@@ -128,4 +128,9 @@ footer {
   .social-icons {
     gap: 1rem;
   }
+}
+
+/* Add this to remove underlines from footer social links */
+.social-icons a {
+  text-decoration: none;
 } 

@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
@@ -11,11 +12,23 @@ import Globe3D from './components/Globe3D';
 import './App.css';
 import './styles/Tablet.css';
 
+// Create a ScrollToTop component
+function ScrollToTop() {
+  const location = useLocation();
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
+
+  return null;
+}
+
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="App">
-        <Globe3D /> {/* Added globe background here */}
+        <Globe3D />
         <Navbar />
         <main className="main-content">
           <Routes>

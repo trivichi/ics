@@ -1,4 +1,82 @@
 import '../styles/ExecutiveBoard.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons';
+
+const memberSocials = {
+  'Kavi Rohith M': {
+    instagram: 'https://www.instagram.com/kavi_.rohith.m/',
+    linkedin: 'https://www.linkedin.com/in/kavi-rohith-m-481761264/'
+  },
+  'Aditya Menon': {
+    linkedin: 'https://www.linkedin.com/in/adityahmenon'
+  },
+  'Akash Manikantan': {
+    instagram: 'https://www.instagram.com/..akash_._/',
+    linkedin: 'https://www.linkedin.com/in/akash-manikantan-n-888336328'
+  },
+  'Aditya Mani': {
+    instagram: 'https://www.instagram.com/adi.tya_mani/',
+    linkedin: 'https://www.linkedin.com/in/aditya-mani-666550198/'
+  },
+  'Gurpreet Singh': {
+    instagram: 'https://www.instagram.com/callmeguri/',
+    linkedin: 'https://www.linkedin.com/in/gurpreet-singh-491a54247'
+  },
+  'Arish': {
+    instagram: 'https://www.instagram.com/arish_palani',
+    linkedin: 'https://www.linkedin.com/in/arish-p-82982a255'
+  },
+  'Shoumik Adhikary': {
+    instagram: 'https://www.instagram.com/shoumik.adhikary/',
+    linkedin: 'https://www.linkedin.com/in/shoumik-adhikary-a28390238/'
+  },
+  'Jiya Sugla': {
+    instagram: 'https://www.instagram.com/jiya_sugla/',
+    linkedin: 'https://www.linkedin.com/in/jiya-sugla-458186277'
+  },
+  'Srishti Shukla': {
+    instagram: 'https://www.instagram.com/https__srishti/',
+    linkedin: 'https://www.linkedin.com/in/srishti-shukla28/'
+  },
+  'Aniruddh Russiya': {
+    instagram: 'https://www.instagram.com/rusiya_aniruddh/',
+    linkedin: 'https://www.linkedin.com/in/aniruddh-rusiya-346a4a252'
+  }
+};
+
+const MemberCard = ({ name, role, image, isFaculty = false }) => {
+  const socials = memberSocials[name];
+
+  return (
+    <div className="member-card">
+      <img src={image} alt={name} />
+      <div className="member-info">
+        <h3>{name}</h3>
+        <p>{role}</p>
+      </div>
+      {!isFaculty && socials && (
+        <div className="member-overlay">
+          <div className="social-links">
+            {socials.linkedin && (
+              <a href={socials.linkedin} target="_blank" rel="noopener noreferrer">
+                <div className="social-icon">
+                  <i className="fab fa-linkedin-in"></i>
+                </div>
+              </a>
+            )}
+            {socials.instagram && (
+              <a href={socials.instagram} target="_blank" rel="noopener noreferrer">
+                <div className="social-icon">
+                  <i className="fab fa-instagram"></i>
+                </div>
+              </a>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
 
 function ExecutiveBoard() {
   return (
@@ -29,110 +107,88 @@ function ExecutiveBoard() {
           {/* Faculty Coordinator - Top Center */}
           <div className="faculty-member">
             <div className="faculty-row">
-              <div className="member-card">
-                <img src="/photos/DR._Thanikaiselvan_V-(Faculty_Coordinator).jpg" alt="Faculty Coordinator" />
-                <div className="member-info">
-                  <h3>Dr. Thanikaiselvan V</h3>
-                  <p>Faculty Coordinator</p>
-                </div>
-              </div>
-              <div className="member-card">
-                <img src="/photos/Dr._Renuga_Devi_S-(Faculty_Coordinator).jpg" alt="Faculty Coordinator" />
-                <div className="member-info">
-                  <h3>Dr. Renuga Devi S</h3>
-                  <p>Faculty Coordinator</p>
-                </div>
-              </div>
+              <MemberCard 
+                name="Dr. Thanikaiselvan V" 
+                role="Faculty Coordinator" 
+                image="/photos/DR._Thanikaiselvan_V-(Faculty_Coordinator).jpg" 
+                isFaculty
+              />
+              <MemberCard 
+                name="Dr. Renuga Devi S" 
+                role="Faculty Coordinator" 
+                image="/photos/Dr._Renuga_Devi_S-(Faculty_Coordinator).jpg" 
+                isFaculty
+              />
             </div>
           </div>
 
           {/* Core Members - Row 1 */}
           <div className="core-members-row">
-            <div className="member-card">
-              <img src="/photos/Aditya_Mani-(Chairperson).jpg" alt="Chairperson" />
-              <div className="member-info">
-                <h3>Aditya Mani</h3>
-                <p>Chairperson</p>
-              </div>
-            </div>
+            <MemberCard 
+              name="Aditya Mani" 
+              role="Chairperson" 
+              image="/photos/Aditya_Mani-(Chairperson).jpg"
+            />
 
-            <div className="member-card">
-              <img src="/photos/Arish-(Secretary).jpg" alt="Secretary" />
-              <div className="member-info">
-                <h3>Arish</h3>
-                <p>Secretary</p>
-              </div>
-            </div>
+            <MemberCard 
+              name="Arish" 
+              role="Secretary" 
+              image="/photos/Arish-(Secretary).jpg"
+            />
 
-            <div className="member-card">
-              <img src="/photos/Aditya_Menon-(Vice_Chairperson).jpg" alt="Vice Chairperson" />
-              <div className="member-info">
-                <h3>Aditya Menon</h3>
-                <p>Vice-Chairperson</p>
-              </div>
-            </div>
+            <MemberCard 
+              name="Aditya Menon" 
+              role="Vice-Chairperson" 
+              image="/photos/Aditya_Menon-(Vice_Chairperson).jpg"
+            />
 
-            <div className="member-card">
-              <img src="/photos/Kavi_Rohith_M-(Co-Secretary).jpg" alt="Co-Secretary" />
-              <div className="member-info">
-                <h3>Kavi Rohith M</h3>
-                <p>Co-Secretary</p>
-              </div>
-            </div>
+            <MemberCard 
+              name="Kavi Rohith M" 
+              role="Co-Secretary" 
+              image="/photos/Kavi_Rohith_M-(Co-Secretary).jpg"
+            />
           </div>
 
           {/* Domain Heads - Row 2 */}
           <div className="domain-heads-row">
-            <div className="member-card">
-              <img src="/photos/Srishti_Shukla-(Technical_Head).jpg" alt="Technical Head" />
-              <div className="member-info">
-                <h3>Srishti Shukla</h3>
-                <p>Technical Head</p>
-              </div>
-            </div>
+            <MemberCard 
+              name="Srishti Shukla" 
+              role="Technical Head" 
+              image="/photos/Srishti_Shukla-(Technical_Head).jpg"
+            />
 
-            <div className="member-card">
-              <img src="/photos/Gurpreet_Singh-(Design_Head).jpg" alt="Design Head" />
-              <div className="member-info">
-                <h3>Gurpreet Singh</h3>
-                <p>Design Head</p>
-              </div>
-            </div>
+            <MemberCard 
+              name="Gurpreet Singh" 
+              role="Design Head" 
+              image="/photos/Gurpreet_Singh-(Design_Head).jpg"
+            />
 
-            <div className="member-card">
-              <img src="/photos/Akash_Manikantan-(Editorial_Head).jpg" alt="Editorial Head" />
-              <div className="member-info">
-                <h3>Akash Manikantan</h3>
-                <p>Editorial Head</p>
-              </div>
-            </div>
+            <MemberCard 
+              name="Akash Manikantan" 
+              role="Editorial Head" 
+              image="/photos/Akash_Manikantan-(Editorial_Head).jpg"
+            />
 
-            <div className="member-card">
-              <img src="/photos/Jiya_Sugla-(Finance_Head).jpg" alt="Finance Head" />
-              <div className="member-info">
-                <h3>Jiya Sugla</h3>
-                <p>Finance Head</p>
-              </div>
-            </div>
+            <MemberCard 
+              name="Jiya Sugla" 
+              role="Finance Head" 
+              image="/photos/Jiya_Sugla-(Finance_Head).jpg"
+            />
           </div>
 
           {/* PR and Projects Heads - Row 3 */}
           <div className="pr-projects-row">
-            <div className="member-card">
-              <img src="/photos/Aniruddh_Russiya-(PR_&_Publicity_Head).jpg" alt="PR & Publicity Head" />
-              <div className="member-info">
-                <h3>Aniruddh Russiya</h3>
-                <p>PR & Publicity Head</p>
-              </div>
-            </div>
+            <MemberCard 
+              name="Aniruddh Russiya" 
+              role="PR & Publicity Head" 
+              image="/photos/Aniruddh_Russiya-(PR_&_Publicity_Head).jpg"
+            />
 
-            <div className="member-card">
-              <img src="/photos/Shoumik_Adhikary-(Projects_Head).jpg" alt="Projects Head" />
-              <div className="member-info">
-                <h3>Shoumik Adhikary</h3>
-                <p>Projects Head</p>
-              </div>
-            </div>
+            <MemberCard 
+              name="Shoumik Adhikary" 
+              role="Projects Head" 
+              image="/photos/Shoumik_Adhikary-(Projects_Head).jpg"
+            />
           </div>
         </div>
       </div>

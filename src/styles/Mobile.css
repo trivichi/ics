@@ -1,0 +1,338 @@
+/* Common Mobile Styles */
+@media (max-width: 480px) {
+  /* Navbar Mobile Styles */
+  .navbar {
+    padding: 0.8rem;
+    height: auto;
+  }
+
+  .logo-container {
+    gap: 0.5rem;
+  }
+
+  .vit-logo {
+    height: 30px;
+  }
+
+  .comsoc-logo {
+    height: 25px;
+  }
+
+  /* Home Page Mobile Styles */
+  .home {
+    padding-top: 10px;
+  }
+
+  .hero-section {
+    padding: 1rem;
+    text-align: center;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 2rem;
+  }
+
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    padding-top: 1rem;
+  }
+
+  .chapter {
+    font-size: 1rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    padding: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .know-more-btn {
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+  }
+
+  /* Events Page Mobile Styles */
+  .events-content {
+    padding: 1rem;
+  }
+
+  .events-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .event-card {
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+
+  .event-image {
+    height: 180px;
+  }
+
+  .event-details {
+    padding: 0.8rem;
+  }
+
+  .event-title {
+    font-size: 1.2rem;
+  }
+
+  /* Blogs Page Mobile Styles */
+  .blogs-container {
+    padding: 1rem;
+  }
+
+  .blog-card {
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+
+  .blog-image {
+    width: 100%;
+    height: 200px;
+  }
+
+  .blog-content {
+    padding: 1rem;
+  }
+
+  .blog-title {
+    font-size: 1.2rem;
+  }
+
+  .blog-excerpt {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  /* Footer Mobile Styles */
+  .footer-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-sections {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .footer-section {
+    width: 100%;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .social-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  /* Domains Section Mobile Styles */
+  .domains-section {
+    padding: 1rem 0.5rem;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .domains-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0rem;
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+  }
+
+  .domain-card {
+    background-color: rgba(50, 50, 50, 0.8);
+    border-radius: 8px;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    margin: 0 auto;
+  }
+
+  .domain-icon {
+    width: 28px;
+    height: 28px;
+    margin-bottom: 0.3rem;
+  }
+
+  .domain-card h3 {
+    font-size: 0.75rem;
+    margin: 0;
+    text-align: center;
+  }
+
+  /* Mission and Vision section adjustments */
+  .mission-vision-container {
+    padding: 1rem 0.5rem;
+    width: 100%;
+  }
+
+  .mission-section, .vision-section {
+    padding:0rem;
+  }
+  /* Hamburger Menu Mobile Styles */
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%; /* Full width */
+    height: 100vh;
+    background: rgba(13, 13, 13, 0.8); /* Glassomorphic background */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s ease;
+    z-index: 999;
+  }
+
+  .navbar-links.active {
+    right: 0;
+  }
+
+  .nav-link-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    padding: 2rem;
+  }
+
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 0.5rem 1rem;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .nav-link:hover {
+    color: #00b4ff;
+    transform: translateY(-2px);
+  }
+
+  /* Hamburger Icon Styles */
+  .menu-toggle {
+    position: relative;
+    z-index: 1000;
+    background: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hamburger,
+  .hamburger::before,
+  .hamburger::after {
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    transition: all 0.3s ease;
+  }
+
+  .hamburger::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+  }
+
+  .hamburger::after {
+    content: '';
+    position: absolute;
+    bottom: 12px;
+  }
+
+  /* Active Hamburger Animation */
+  .hamburger.active {
+    background: transparent;
+  }
+
+  .hamburger.active::before {
+    transform: rotate(45deg);
+    top: 19px;
+  }
+
+  .hamburger.active::after {
+    transform: rotate(-45deg);
+    bottom: 19px;
+  }
+
+  /* Contact Page Mobile Styles */
+  .contact-page {
+    padding-top: 60px;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-page .hero-section {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 0;
+  }
+
+  .contact-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .form-row input,
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+
+} 
