@@ -30,8 +30,6 @@ function Home() {
         <div className="about-vit-card">
           <h2 className="section-title">
             ABOUT VIT
-            <span className="diamond-left"></span>
-            <span className="diamond-right"></span>
           </h2>
           <div className="vit-image">
             <img src="/TT_photo/TT_FINAL_PHOTO_27-12-2007.jpg" alt="VIT Campus" />

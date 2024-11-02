@@ -1,6 +1,5 @@
 import '../styles/ExecutiveBoard.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons';
+
 
 const memberSocials = {
   'Kavi Rohith M': {
